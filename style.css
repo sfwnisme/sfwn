@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  --bg-color: #272a36;
+  --bg-lite-color: #272a3661;
+  --main-color: #e32a49;
+  --imm-color: #00994f;
+  --transition: 0.3s;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* big */
+@media (min-width: 1199px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+body {
+  font-family: consolas;
+  text-transform: capitalize;
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+/* ----------layout formatting end--------- */
+
+/* start landing */
+.landing {
+  height: 100vh;
+}
+.landign .container {
+  position: relative;
+}
+/* start header */
+.landing .container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.landing .container header .logo img {
+  width: 30px;
+}
+.landing .container header nav {
+  overflow: hidden;
+}
+.landing .container header nav span {
+  margin-left: 30px;
+  position: relative;
+}
+.landing .container header nav span:last-child {
+  margin-right: 5px;
+}
+.landing .container header nav span::before {
+  content: "";
+  position: absolute;
+  background-color: var(--imm-color);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  z-index: -1;
+  transform: translate(-50%, -150%);
+  -webkit-transform: translate(-50%, -150%);
+  -moz-transform: translate(-50%, -150%);
+  -ms-transform: translate(-50%, -150%);
+  -o-transform: translate(-50%, -150%);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  top: 50%;
+  left: 50%;
+}
+.landing .container header nav span::after {
+  content: "";
+  position: absolute;
+  background-color: var(--bg-color);
+  width: calc(100% + 5px);
+  height: calc(100% + 10px);
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  top: 50%;
+  left: 50%;
+}
+
+.landing .container header nav span:hover::before {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+/* end header */
+/* start land */
+
+.landing .container .land .image {
+  width: 100%;
+}
+.landing .container .land .image img {
+  display: none;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.land .txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.land .txt h1 {
+  color: var(--main-color);
+  font-size: 100px;
+  font-weight: 800;
+  text-shadow: -3px 3px var(--bg-color), -5px 5px var(--imm-color);
+}
+.land .txt p {
+  color: var(--imm-color);
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  line-height: 1.5;
+  /* text-decoration:underline; */
+}
+.land .btn a {
+  color: white;
+  background-color: var(--imm-color);
+  padding: 5px 20px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  /* box-shadow: -1px 1px 10px var(--bg-lite-color); */
+}
+.land .btn a:hover {
+  box-shadow: -2.5px 2.5px 0px var(--bg-color), -5px 5px 0px var(--main-color);
+}
+.land .social {
+  /* color: var(--imm-color); */
+  /* position: absolute; */
+  margin-top: 30px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.land .social i {
+  margin-right: 5px;
+  margin-left: 5px;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.land .social i:hover {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  color: var(--imm-color);
+}
+/* end land */
+
+/* end landing */
+
+/* start animation */
+@keyframes jumb {
+  100% {
+  }
+}
+/* end animation */
